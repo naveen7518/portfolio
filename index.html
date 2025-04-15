@@ -30,22 +30,35 @@
 	    <div class="container">
 			<a class="navbar-brand" href="index.html">
 				<img src="images/logo.png" alt="Logo" height="100" width="100">
-			</a>
-					  <button class="navbar-toggler js-fh5co-nav-toggle fh5co-nav-toggle" type="button" data-toggle="collapse" data-target="#ftco-nav" aria-controls="ftco-nav" aria-expanded="false" aria-label="Toggle navigation">
-	        <span class="oi oi-menu"></span> Menu
-	      </button>
-
-	      <div class="collapse navbar-collapse" id="ftco-nav">
-	        <ul class="navbar-nav nav ml-auto">
-	          <li class="nav-item"><a href="#home-section" class="nav-link"><span>Home</span></a></li>
-	          <li class="nav-item"><a href="#about-section" class="nav-link"><span>About</span></a></li>
-	          <li class="nav-item"><a href="#resume-section" class="nav-link"><span>Resume</span></a></li>
-	          <li class="nav-item"><a href="#services-section" class="nav-link"><span>Services</span></a></li>
-	          <li class="nav-item"><a href="#skills-section" class="nav-link"><span>Skills</span></a></li>
-	          <!-- <li class="nav-item"><a href="#projects-section" class="nav-link"><span>Projects</span></a></li> -->
-	          <li class="nav-item"><a href="#contact-section" class="nav-link"><span>Contact</span></a></li>
-	        </ul>
-	      </div>
+			</a><button class="navbar-toggler js-fh5co-nav-toggle fh5co-nav-toggle" type="button" data-toggle="collapse" data-target="#ftco-nav" aria-controls="ftco-nav" aria-expanded="false" aria-label="Toggle navigation">
+				<span class="oi oi-menu"></span> Menu
+			  </button>
+			  
+			  <div class="collapse navbar-collapse" id="ftco-nav">
+				<ul class="navbar-nav nav ml-auto">
+				  <li class="nav-item"><a href="#home-section" class="nav-link" id="menu-home"><span>Home</span></a></li>
+				  <li class="nav-item"><a href="#about-section" class="nav-link" id="menu-about"><span>About</span></a></li>
+				  <li class="nav-item"><a href="#resume-section" class="nav-link" id="menu-resume"><span>Resume</span></a></li>
+				  <li class="nav-item"><a href="#services-section" class="nav-link" id="menu-services"><span>Services</span></a></li>
+				  <li class="nav-item"><a href="#skills-section" class="nav-link" id="menu-skills"><span>Skills</span></a></li>
+				  <!-- <li class="nav-item"><a href="#projects-section" class="nav-link" id="menu-projects"><span>Projects</span></a></li> -->
+				  <li class="nav-item"><a href="#contact-section" class="nav-link" id="menu-contact"><span>Contact</span></a></li>
+				</ul>
+			  </div>
+			  
+			  <script>
+				// Close the navigation menu when a menu item is clicked
+				document.querySelectorAll('.nav-link').forEach(item => {
+				  item.addEventListener('click', () => {
+					// Find the parent collapse element and hide it
+					let collapseElement = document.querySelector('.navbar-collapse');
+					if (collapseElement.classList.contains('show')) {
+					  collapseElement.classList.remove('show');
+					}
+				  });
+				});
+			  </script>
+			  
 	    </div>
 	  </nav>
 	  <section id="home-section" class="hero">
